@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var Articles={
-            Article1: {
+            Article-one: {
               title: 'Article one--GRM',
               heading: 'Article 1',
               date: 'Sep 28,2016',
@@ -27,7 +27,7 @@ var Articles={
                         unauthorised usage is encountered.
                     </p>`
             },
-            Article2: {
+            Article-two: {
              title: 'Article two--GRM',
              heading: 'Article 2',
              date: 'Sep 28,2016',
@@ -48,7 +48,7 @@ var Articles={
                     unauthorised usage is encountered.
                 </p>`   
         },
-            Article3: {
+            Article-three: {
             title: 'Article three--GRM',
             heading: 'Article 3',
             date: 'Sep 28,2016',
@@ -108,17 +108,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/Article1',function(req,res){
-    res.send(createTemplate(Article1))
-});
-app.get('/Article2',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'Article2.html'));
-});
-app.get('/Article3',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'Article3.html'));
-});
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+app.get('/:Articlename',function(req,res){
+    var Articlename=req.params.Articlename;
+    res.send(createTemplate(Articles(Articlename)));
 });
 
 app.get('/ui/madi.png', function (req, res) {
