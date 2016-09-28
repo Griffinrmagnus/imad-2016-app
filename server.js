@@ -5,27 +5,70 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var Article1={
-  title: 'Article one--GRM',
-  heading: 'Article 1',
-  date: 'Sep 28,2016',
-  content: `
-        <p>
-            This the content for my first article in my first webapp.This webapp was created by me on Sep 28,2016
-            using the imad code console for the NPTEL online course.The contents may be subject to copywright if
-            unauthorised usage is encountered.
-        </p>
-        <p>
-            This the content for my first article in my first webapp.This webapp was created by me on Sep 28,2016
-            using the imad code console for the NPTEL online course.The contents may be subject to copywright if
-            unauthorised usage is encountered.
-        </p>
-        <p>
-            This the content for my first article in my first webapp.This webapp was created by me on Sep 28,2016
-            using the imad code console for the NPTEL online course.The contents may be subject to copywright if
-            unauthorised usage is encountered.
-        </p>`
+var Articles={
+             Article1:{
+              title: 'Article one--GRM',
+              heading: 'Article 1',
+              date: 'Sep 28,2016',
+              content: `
+                    <p>
+                        This the content for my first article in my first webapp.This webapp was created by me on Sep 28,2016
+                        using the imad code console for the NPTEL online course.The contents may be subject to copywright if
+                        unauthorised usage is encountered.
+                    </p>
+                    <p>
+                        This the content for my first article in my first webapp.This webapp was created by me on Sep 28,2016
+                        using the imad code console for the NPTEL online course.The contents may be subject to copywright if
+                        unauthorised usage is encountered.
+                    </p>
+                    <p>
+                        This the content for my first article in my first webapp.This webapp was created by me on Sep 28,2016
+                        using the imad code console for the NPTEL online course.The contents may be subject to copywright if
+                        unauthorised usage is encountered.
+                    </p>`
+            },
+            Article2:{
+             title: 'Article two--GRM',
+             heading: 'Article 2',
+             date: 'Sep 28,2016',
+             content: `
+                <p>
+                    This the content for my second article in my first webapp.This webapp was created by me on Sep 28,2016
+                    using the imad code console for the NPTEL online course.The contents may be subject to copywright if
+                    unauthorised usage is encountered.
+                </p>
+                <p>
+                    This the content for my second article in my first webapp.This webapp was created by me on Sep 28,2016
+                    using the imad code console for the NPTEL online course.The contents may be subject to copywright if
+                    unauthorised usage is encountered.
+                </p>
+                <p>
+                    This the content for my second article in my first webapp.This webapp was created by me on Sep 28,2016
+                    using the imad code console for the NPTEL online course.The contents may be subject to copywright if
+                    unauthorised usage is encountered.
+                </p>`   
+        },
+        Article3:{
+            title: 'Article three--GRM',
+            heading: 'Article 3',
+            date: 'Sep 28,2016',
+            content: `
+                    <p>
+                        This the content for my third article in my first webapp.This webapp was created by me on Sep 28,2016
+                        using the imad code console for the NPTEL online course.The contents may be subject to copywright if
+                        unauthorised usage is encountered.
+                    </p>
+                    <p>
+                        This the content for my third article in my first webapp.This webapp was created by me on Sep 28,2016
+                        using the imad code console for the NPTEL online course.The contents may be subject to copywright if
+                        unauthorised usage is encountered.
+                    </p>
+                    <p>
+                        This the content for my third article in my first webapp.This webapp was created by me on Sep 28,2016
+                        using the imad code console for the NPTEL online course.The contents may be subject to copywright if
+                        unauthorised usage is encountered.
+                    </p>`
+        },
 };
 function createTemplate(data){
     var title= data.title;
