@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var Articles={
-             Article1:{
+            Article1: {
               title: 'Article one--GRM',
               heading: 'Article 1',
               date: 'Sep 28,2016',
@@ -27,7 +27,7 @@ var Articles={
                         unauthorised usage is encountered.
                     </p>`
             },
-            Article2:{
+            Article2: {
              title: 'Article two--GRM',
              heading: 'Article 2',
              date: 'Sep 28,2016',
@@ -48,7 +48,7 @@ var Articles={
                     unauthorised usage is encountered.
                 </p>`   
         },
-        Article3:{
+            Article3: {
             title: 'Article three--GRM',
             heading: 'Article 3',
             date: 'Sep 28,2016',
