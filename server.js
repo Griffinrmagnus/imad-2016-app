@@ -68,7 +68,7 @@ var articles={
                         using the imad code console for the NPTEL online course.The contents may be subject to copywright if
                         unauthorised usage is encountered.
                     </p>`
-        }
+        },
 };
 function createTemplate(data){
     var title= data.title;
@@ -109,7 +109,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName',function(req,res){
-    var articleName=req.params.articleName;
+    var articleName = req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
 
