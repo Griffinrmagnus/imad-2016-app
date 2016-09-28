@@ -5,8 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var Articles={
-            Article-one: {
+var articles={
+            article-one: {
               title: 'Article one--GRM',
               heading: 'Article 1',
               date: 'Sep 28,2016',
@@ -27,7 +27,7 @@ var Articles={
                         unauthorised usage is encountered.
                     </p>`
             },
-            Article-two: {
+            article-two: {
              title: 'Article two--GRM',
              heading: 'Article 2',
              date: 'Sep 28,2016',
@@ -48,7 +48,7 @@ var Articles={
                     unauthorised usage is encountered.
                 </p>`   
         },
-            Article-three: {
+            article-three: {
             title: 'Article three--GRM',
             heading: 'Article 3',
             date: 'Sep 28,2016',
@@ -68,7 +68,7 @@ var Articles={
                         using the imad code console for the NPTEL online course.The contents may be subject to copywright if
                         unauthorised usage is encountered.
                     </p>`
-        },
+        }
 };
 function createTemplate(data){
     var title= data.title;
@@ -108,9 +108,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:Articlename',function(req,res){
-    var Articlename=req.params.Articlename;
-    res.send(createTemplate(Articles(Articlename)));
+app.get('/:articleName',function(req,res){
+    var articleName=req.params.articleName;
+    res.send(createTemplate(articles(articleName)));
 });
 
 app.get('/ui/madi.png', function (req, res) {
